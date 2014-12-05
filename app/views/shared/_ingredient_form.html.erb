@@ -1,0 +1,13 @@
+<%= form_for(@ingredient) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+	<div class="field">
+		<%= f.text_area :first, placeholder: "Enter a fruit or vegetable" %>
+	</div>
+	<div class="field">
+		<%= f.text_area :second, placeholder: "Enter a protein or grain" %>
+	</div>
+	<div class="field">
+		<%= f.text_area :considerations, placeholder: "Do you have any dietary considerations?" %>
+	</div>
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

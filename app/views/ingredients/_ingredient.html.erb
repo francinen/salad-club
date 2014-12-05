@@ -1,0 +1,10 @@
+<ul class="ingredient" id="ingredient-<%= ingredient.id %>">
+	
+	<li class="first"><h4>Fruit/Vegetable:</h4> <%= ingredient.first %></li>
+	<li class="second"><h4>Protein/Grain:</h4> <%= ingredient.second %></li>
+	<li class="considerations"><h4>Dietary Considerations:</h4> <%= ingredient.considerations %></li>
+</ul>
+<% if current_user?(ingredient.user) %>
+      <%= link_to "delete", ingredient, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>

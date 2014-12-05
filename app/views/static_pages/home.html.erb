@@ -1,0 +1,31 @@
+<% if logged_in? %>
+<div class="row">
+	<aside class="col-md-4">
+		<ul class="ingredients clearfix">
+			
+			<ul class="fruits-n-veg">
+			<h3>Fruits &amp; Vegetables</h3>
+			<% @ingredients.each do |ingredient| %>
+				<li>
+					<%= ingredient.first %>
+				</li>
+			<% end %>
+			</ul>	
+			<ul class="protein-n-grains">
+			<h3>Proteins, Dairy &amp; Grains</h3>
+			<% @ingredients.each do |ingredient| %>
+				<li>
+					<%= ingredient.second %>
+				</li>
+			<% end %>
+			</ul>
+			
+		</ul>
+	</aside>
+</div>
+<% else %>
+	<div class="home">	
+		<h1>Salad Club</h1>
+		<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary sign-up" %>
+	</div>
+<% end %>

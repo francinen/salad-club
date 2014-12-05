@@ -1,0 +1,18 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+	<div>
+		<% if @user.ingredients.any? %>
+		<h3><%= @user.name %>'s Salad Day Profile</h3>	
+			<%= render @ingredients %>
+		<% end %>
+	</div>
+	<% if logged_in? %>
+	<div class="row">
+		<aside class="col-md-4">
+			<section class="ingredient_form">
+				<%= render 'shared/ingredient_form' %>
+			</section>
+		</aside>
+	</div>
+	<% end %>
+</div>

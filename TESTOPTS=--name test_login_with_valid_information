@@ -1,0 +1,34 @@
+Run options: --seed 17511
+
+# Running:
+
+EE
+
+Finished in 0.008396s, 238.2087 runs/s, 0.0000 assertions/s.
+
+  1) Error:
+UsersLoginTest#test_login_with_invalid_information:
+SyntaxError: /Users/francinenavarro/workspace/sample_app/app/models/user.rb:10: syntax error, unexpected tSYMBEG, expecting '('
+...st ? BCrypt::Engine::MIN_COST :BCrypt::Engine.cost
+...                               ^
+    
+
+Error:
+UsersLoginTest#test_login_with_invalid_information:
+NoMethodError: undefined method `each' for nil:NilClass
+    
+
+
+  2) Error:
+UsersLoginTest#test_login_with_valid_information:
+SyntaxError: /Users/francinenavarro/workspace/sample_app/app/models/user.rb:10: syntax error, unexpected tSYMBEG, expecting '('
+...st ? BCrypt::Engine::MIN_COST :BCrypt::Engine.cost
+...                               ^
+    
+
+Error:
+UsersLoginTest#test_login_with_valid_information:
+NoMethodError: undefined method `each' for nil:NilClass
+    
+
+2 runs, 0 assertions, 0 failures, 2 errors, 0 skips
